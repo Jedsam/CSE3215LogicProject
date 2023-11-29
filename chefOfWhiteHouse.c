@@ -20,12 +20,12 @@ void assemble_program(const char* input_file, const char* output_file);
 
 // Main function
 int main(int argc, char* argv[]) {
-    if (argc != 3) {
+   /* if (argc != 3) {
         fprintf(stderr, "Usage: %s <input_file.asm> <output_file.hex>\n", argv[0]);
         return EXIT_FAILURE;
-    }
+    }*/
 
-    assemble_program(argv[1], argv[2]);
+    assemble_program("input1.txt", "output.txt");
     printf("Assembly completed successfully.\n");
 
     return EXIT_SUCCESS;
@@ -84,8 +84,9 @@ void assemble_instruction(const char* instruction, char* binary_instr) {
                  (strcmp(instr, "JB") == 0) ? 0xD :
                  (strcmp(instr, "JAE") == 0) ? 0xE : 0xF;
         sscanf(instruction, "%s %s %s", instr, reg1, reg2);
-        rd = (opcode == 0x9 || opcode == 0x7) ? 0 : reg_to_bin(reg1); // ST and JUMP have no destination register
-        addr = addr_to_bin(reg2, 10);
+        rd = (opcode == 0x9 || opcode == 0x8) ? reg_to_bin(reg1) : 0; // ST and JUMP have no destination register
+        if (opcode == 0x9 || opcode == 0x8) addr = addr_to_bin(reg2, 10);
+        else addr = addr_to_bin(reg1, 10);
         binary_value = (opcode << 14) | (rd << 10) | addr;
     } else if (strcmp(instr, "CMP") == 0) {
         // Format for CMP
@@ -93,7 +94,7 @@ void assemble_instruction(const char* instruction, char* binary_instr) {
         sscanf(instruction, "%s %s %s", instr, reg1, reg2);
         rd = reg_to_bin(reg1);
         rs = reg_to_bin(reg2);
-        binary_value = (opcode << 14) | (rd << 10) | (rs << 6);
+        binary_value = (opcode << 14) | (rd << 10) | rs;
     } else {
         // Unsupported instruction
         fprintf(stderr, "Error: Unsupported instruction '%s'\n", instr);
@@ -124,7 +125,7 @@ void assemble_program(const char* input_file, const char* output_file) {
     }
 
     while (fgets(line, MAX_LINE_LENGTH, fp_read)) {
-        if (line[0] == '\n') continue; // Skip empty lines and comments
+        if (line[0] == '\n') continue; // Skip empty lines
         assemble_instruction(line, binary_instr);
         if (binary_instr[0] != '\0') { // Only write if binary_instr is not empty
             fprintf(fp_write, "%s\n", binary_instr);
