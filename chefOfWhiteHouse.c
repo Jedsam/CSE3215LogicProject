@@ -124,7 +124,7 @@ void assemble_program(const char* input_file, const char* output_file) {
     }
 
     while (fgets(line, MAX_LINE_LENGTH, fp_read)) {
-        if (line[0] == '\n' || line[0] == '#') continue; // Skip empty lines and comments
+        if (line[0] == '\n') continue; // Skip empty lines and comments
         assemble_instruction(line, binary_instr);
         if (binary_instr[0] != '\0') { // Only write if binary_instr is not empty
             fprintf(fp_write, "%s\n", binary_instr);
