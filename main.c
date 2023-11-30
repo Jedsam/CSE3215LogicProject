@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
+//(ISO C99 requires these imports)
+
 
 // Define the maximum length
 #define MAX_INSTR_LENGTH 10
