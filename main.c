@@ -80,38 +80,15 @@ void assemble_instruction(const char* instruction, char* binary_instr) {
     } else if (strcmp(instr, "LD") == 0 || strcmp(instr, "ST") == 0 || strcmp(instr, "JUMP") == 0 || strcmp(instr, "JE") == 0 ||
                strcmp(instr, "JA") == 0 || strcmp(instr, "JB") == 0 || strcmp(instr, "JAE") == 0 || strcmp(instr, "JBE") == 0) {
         // Format for LD, ST, JUMP, JE, JA, JB, JAE, JBE
-        if (strcmp(instr, "JUMP") == 0) {opcode = 0x7;
-            if(reg1 < 0){
-                reg1 + MAX_ADRESS_VAL;
-            }
-        }
+        if (strcmp(instr, "JUMP") == 0) opcode = 0x7;
         else if(strcmp(instr, "LD") == 0) opcode = 0x8;
         else if(strcmp(instr, "ST") == 0) opcode = 0x9;
-        else if(strcmp(instr, "JE") == 0){ opcode = 0xB;
-            if(reg1 < 0){
-                reg1 + MAX_ADRESS_VAL;
-            }
-        }
-        else if(strcmp(instr, "JA") == 0){ opcode = 0xC;
-                    if(reg1 < 0){
-                reg1 + MAX_ADRESS_VAL;
-            }
-        }
-        else if(strcmp(instr, "JB") == 0) {opcode = 0xD;
-                    if(reg1 < 0){
-                reg1 + MAX_ADRESS_VAL;
-            }
-        }
-        else if(strcmp(instr, "JAE") == 0) {opcode = 0xE;
-                    if(reg1 < 0){
-                reg1 + MAX_ADRESS_VAL;
-            }
-        }
-        else {opcode = 0xF;
-            if(reg1 < 0){
-                reg1 + MAX_ADRESS_VAL;
-            }
-        }
+        else if(strcmp(instr, "JE") == 0) opcode = 0xB;
+        else if(strcmp(instr, "JA") == 0) opcode = 0xC;
+        else if(strcmp(instr, "JB") == 0) opcode = 0xD;        
+        else if(strcmp(instr, "JAE") == 0) opcode = 0xE;
+        else opcode = 0xF;
+        
               
         sscanf(instruction, "%s %s %s", instr, reg1, reg2);
         rd = (opcode == 0x9 || opcode == 0x8) ? reg_to_bin(reg1) : 0; // only ST and LD have destination or source register
