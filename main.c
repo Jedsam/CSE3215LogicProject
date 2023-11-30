@@ -154,7 +154,7 @@ void assemble_program(const char* input_file, const char* output_file) {
         fclose(fp_read);
         exit(1);
     }
-
+    fprintf(fp_write,"v2.0 raw\n");
     while (fgets(line, MAX_LINE_LENGTH, fp_read)) {
         if (line[0] == '\n') continue; // Skip empty lines
         assemble_instruction(line, binary_instr);
