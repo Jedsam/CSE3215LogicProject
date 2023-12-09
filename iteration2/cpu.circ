@@ -71,32 +71,33 @@
     </appear>
     <wire from="(410,360)" to="(410,430)"/>
     <wire from="(690,300)" to="(740,300)"/>
+    <wire from="(270,470)" to="(320,470)"/>
+    <wire from="(680,430)" to="(740,430)"/>
+    <wire from="(580,410)" to="(620,410)"/>
+    <wire from="(320,260)" to="(320,470)"/>
+    <wire from="(320,470)" to="(430,470)"/>
+    <wire from="(320,260)" to="(360,260)"/>
     <wire from="(390,260)" to="(420,260)"/>
-    <wire from="(740,300)" to="(790,300)"/>
-    <wire from="(740,430)" to="(790,430)"/>
     <wire from="(610,320)" to="(630,320)"/>
     <wire from="(380,360)" to="(410,360)"/>
     <wire from="(470,280)" to="(630,280)"/>
     <wire from="(580,350)" to="(740,350)"/>
-    <wire from="(270,470)" to="(320,470)"/>
     <wire from="(410,430)" to="(430,430)"/>
-    <wire from="(680,430)" to="(740,430)"/>
-    <wire from="(580,410)" to="(620,410)"/>
     <wire from="(410,300)" to="(420,300)"/>
+    <wire from="(740,430)" to="(810,430)"/>
+    <wire from="(740,300)" to="(810,300)"/>
     <wire from="(480,450)" to="(620,450)"/>
     <wire from="(580,350)" to="(580,410)"/>
     <wire from="(610,320)" to="(610,380)"/>
-    <wire from="(320,260)" to="(320,470)"/>
-    <wire from="(320,470)" to="(430,470)"/>
     <wire from="(610,380)" to="(740,380)"/>
-    <wire from="(740,300)" to="(740,350)"/>
     <wire from="(740,380)" to="(740,430)"/>
+    <wire from="(740,300)" to="(740,350)"/>
     <wire from="(410,300)" to="(410,360)"/>
-    <wire from="(320,260)" to="(360,260)"/>
     <comp lib="1" loc="(470,280)" name="AND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(810,430)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Q'"/>
       <a name="labelloc" val="east"/>
@@ -116,6 +117,7 @@
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(810,300)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Q"/>
       <a name="labelloc" val="east"/>
