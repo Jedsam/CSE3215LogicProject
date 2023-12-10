@@ -1821,16 +1821,31 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(530,290)" to="(530,330)"/>
-    <wire from="(600,250)" to="(620,250)"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="30" stroke="#000000" stroke-width="2" width="30" x="41" y="50"/>
+      <circ-port height="8" pin="510,140" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="640,250" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="560,140" width="8" x="76" y="66"/>
+      <circ-port height="8" pin="610,280" width="8" x="76" y="66"/>
+      <circ-anchor facing="east" height="6" width="6" x="77" y="57"/>
+    </appear>
+    <wire from="(670,370)" to="(670,380)"/>
+    <wire from="(530,290)" to="(530,300)"/>
+    <wire from="(550,370)" to="(550,380)"/>
+    <wire from="(590,370)" to="(590,380)"/>
+    <wire from="(630,370)" to="(630,380)"/>
     <wire from="(550,270)" to="(600,270)"/>
     <wire from="(550,280)" to="(610,280)"/>
-    <wire from="(460,330)" to="(460,340)"/>
-    <wire from="(510,140)" to="(520,140)"/>
+    <wire from="(470,370)" to="(470,380)"/>
+    <wire from="(510,370)" to="(510,380)"/>
     <wire from="(550,140)" to="(550,230)"/>
+    <wire from="(420,370)" to="(420,390)"/>
+    <wire from="(410,370)" to="(410,390)"/>
     <wire from="(540,230)" to="(540,260)"/>
-    <wire from="(460,330)" to="(530,330)"/>
     <wire from="(600,250)" to="(600,270)"/>
+    <wire from="(600,250)" to="(620,250)"/>
+    <wire from="(510,140)" to="(520,140)"/>
     <wire from="(550,140)" to="(560,140)"/>
     <wire from="(540,230)" to="(550,230)"/>
     <wire from="(520,140)" to="(520,260)"/>
@@ -1838,11 +1853,6 @@
       <a name="facing" val="south"/>
       <a name="selloc" val="tr"/>
       <a name="width" val="18"/>
-    </comp>
-    <comp lib="1" loc="(640,400)" name="NAND Gate">
-      <a name="facing" val="south"/>
-      <a name="width" val="18"/>
-      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(510,140)" name="Pin">
       <a name="width" val="18"/>
@@ -1855,13 +1865,20 @@
       <a name="label" val="selection-bit-1"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(560,400)" name="NOR Gate">
+    <comp lib="1" loc="(570,440)" name="NOR Gate">
       <a name="facing" val="south"/>
       <a name="width" val="18"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp loc="(400,380)" name="full-adder-18-bit">
+    <comp lib="1" loc="(650,440)" name="NAND Gate">
       <a name="facing" val="south"/>
+      <a name="width" val="18"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(490,430)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="18"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(610,280)" name="Pin">
       <a name="facing" val="west"/>
@@ -1876,10 +1893,8 @@
       <a name="label" val="input-2(18-bit)"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="1" loc="(480,390)" name="AND Gate">
+    <comp loc="(410,420)" name="full-adder-18-bit">
       <a name="facing" val="south"/>
-      <a name="width" val="18"/>
-      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
