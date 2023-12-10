@@ -1850,6 +1850,11 @@
       <a name="label" val="input-1(18-bit)"/>
       <a name="labelloc" val="north"/>
     </comp>
+    <comp lib="0" loc="(640,250)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="selection-bit-1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="1" loc="(560,400)" name="NOR Gate">
       <a name="facing" val="south"/>
       <a name="width" val="18"/>
@@ -1861,7 +1866,7 @@
     <comp lib="0" loc="(610,280)" name="Pin">
       <a name="facing" val="west"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="selection-bit"/>
+      <a name="label" val="selection-bit-2"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(560,140)" name="Pin">
