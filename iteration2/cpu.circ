@@ -1821,16 +1821,28 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(530,290)" to="(530,330)"/>
+    <wire from="(600,250)" to="(620,250)"/>
+    <wire from="(550,270)" to="(600,270)"/>
+    <wire from="(550,280)" to="(610,280)"/>
+    <wire from="(460,330)" to="(460,340)"/>
     <wire from="(510,140)" to="(520,140)"/>
-    <wire from="(570,260)" to="(570,270)"/>
-    <wire from="(550,260)" to="(570,260)"/>
-    <wire from="(520,140)" to="(520,200)"/>
-    <wire from="(570,270)" to="(630,270)"/>
-    <comp lib="0" loc="(660,140)" name="Pin">
+    <wire from="(550,140)" to="(550,230)"/>
+    <wire from="(540,230)" to="(540,260)"/>
+    <wire from="(460,330)" to="(530,330)"/>
+    <wire from="(600,250)" to="(600,270)"/>
+    <wire from="(550,140)" to="(560,140)"/>
+    <wire from="(540,230)" to="(550,230)"/>
+    <wire from="(520,140)" to="(520,260)"/>
+    <comp lib="2" loc="(530,290)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="selloc" val="tr"/>
       <a name="width" val="18"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="input-2(18-bit)"/>
-      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="1" loc="(640,400)" name="NAND Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="18"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(510,140)" name="Pin">
       <a name="width" val="18"/>
@@ -1838,16 +1850,31 @@
       <a name="label" val="input-1(18-bit)"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp loc="(430,360)" name="full-adder-18-bit"/>
-    <comp lib="2" loc="(530,250)" name="Multiplexer">
-      <a name="facing" val="north"/>
-      <a name="selloc" val="tr"/>
-      <a name="select" val="2"/>
-      <a name="width" val="4"/>
+    <comp lib="1" loc="(560,400)" name="NOR Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="18"/>
+      <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(630,270)" name="Pin">
+    <comp loc="(400,380)" name="full-adder-18-bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(610,280)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="tristate" val="false"/>
       <a name="label" val="selection-bit"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(560,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="18"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="input-2(18-bit)"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="1" loc="(480,390)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="18"/>
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
