@@ -1162,6 +1162,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(530,1490)" to="(530,1510)"/>
     <wire from="(1390,410)" to="(1510,410)"/>
     <wire from="(1140,660)" to="(1140,710)"/>
+    <wire from="(250,1480)" to="(270,1480)"/>
     <wire from="(1160,680)" to="(1160,740)"/>
     <wire from="(170,1000)" to="(170,1110)"/>
     <wire from="(1160,1160)" to="(1160,1220)"/>
@@ -1413,7 +1414,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(950,110)" to="(950,1000)"/>
     <wire from="(570,1260)" to="(570,1320)"/>
     <wire from="(570,780)" to="(570,840)"/>
-    <wire from="(290,1480)" to="(370,1480)"/>
     <wire from="(470,770)" to="(470,1010)"/>
     <wire from="(570,1380)" to="(580,1380)"/>
     <wire from="(570,900)" to="(580,900)"/>
@@ -1462,8 +1462,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1050,1460)" to="(1080,1460)"/>
     <wire from="(1050,660)" to="(1080,660)"/>
     <wire from="(1050,980)" to="(1080,980)"/>
-    <wire from="(250,1480)" to="(260,1480)"/>
-    <wire from="(120,1030)" to="(130,1030)"/>
     <wire from="(570,720)" to="(570,780)"/>
     <wire from="(570,1200)" to="(570,1260)"/>
     <wire from="(890,1360)" to="(1090,1360)"/>
@@ -1608,6 +1606,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(370,560)" to="(370,620)"/>
     <wire from="(570,720)" to="(580,720)"/>
     <wire from="(570,1200)" to="(580,1200)"/>
+    <wire from="(300,1480)" to="(370,1480)"/>
     <comp lib="1" loc="(1100,510)" name="Controlled Buffer">
       <a name="width" val="18"/>
       <a name="control" val="left"/>
@@ -1633,11 +1632,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="control" val="left"/>
     </comp>
     <comp loc="(610,1070)" name="register"/>
-    <comp lib="0" loc="(120,1030)" name="Pin">
-      <a name="width" val="18"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="inData1"/>
-    </comp>
     <comp loc="(610,1370)" name="register"/>
     <comp loc="(610,770)" name="register"/>
     <comp lib="1" loc="(1100,570)" name="Controlled Buffer">
@@ -1658,6 +1652,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="select" val="5"/>
       <a name="disabled" val="0"/>
     </comp>
+    <comp loc="(300,1480)" name="1-&gt;0 sequential"/>
     <comp lib="0" loc="(560,1560)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="clock"/>
@@ -1665,6 +1660,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(1100,630)" name="Controlled Buffer">
       <a name="width" val="18"/>
       <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(130,1030)" name="Pin">
+      <a name="width" val="18"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="inData1"/>
     </comp>
     <comp lib="1" loc="(1100,680)" name="Controlled Buffer">
       <a name="width" val="18"/>
@@ -1688,7 +1688,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="18"/>
       <a name="control" val="left"/>
     </comp>
-    <comp loc="(610,540)" name="register"/>
     <comp lib="1" loc="(1100,1160)" name="Controlled Buffer">
       <a name="width" val="18"/>
       <a name="control" val="left"/>
@@ -1720,7 +1719,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="18"/>
       <a name="control" val="left"/>
     </comp>
-    <comp loc="(290,1480)" name="1-&gt;0 sequential"/>
     <comp loc="(610,1490)" name="register"/>
     <comp lib="1" loc="(1100,1040)" name="Controlled Buffer">
       <a name="width" val="18"/>
@@ -1737,6 +1735,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="enableOutdata1"/>
     </comp>
+    <comp loc="(610,540)" name="register"/>
     <comp lib="1" loc="(1100,1370)" name="Controlled Buffer">
       <a name="width" val="18"/>
       <a name="control" val="left"/>
@@ -1749,6 +1748,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(1100,1340)" name="Controlled Buffer">
       <a name="width" val="18"/>
       <a name="control" val="left"/>
+    </comp>
+    <comp lib="6" loc="(1463,696)" name="Text">
+      <a name="text" val="Ters olmuşlar :)"/>
+      <a name="font" val="SansSerif plain 14"/>
     </comp>
     <comp lib="0" loc="(1430,740)" name="Pin">
       <a name="facing" val="west"/>
