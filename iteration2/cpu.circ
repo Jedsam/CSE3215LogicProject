@@ -1855,16 +1855,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="630,760" width="10" x="75" y="55"/>
       <circ-port height="8" pin="350,480" width="8" x="46" y="76"/>
       <circ-port height="10" pin="240,750" width="10" x="75" y="85"/>
+      <circ-port height="10" pin="330,780" width="10" x="75" y="95"/>
       <circ-anchor facing="east" height="6" width="6" x="77" y="57"/>
     </appear>
     <wire from="(560,220)" to="(680,220)"/>
-    <wire from="(380,540)" to="(380,800)"/>
     <wire from="(590,230)" to="(590,240)"/>
     <wire from="(380,410)" to="(380,480)"/>
     <wire from="(780,620)" to="(780,630)"/>
+    <wire from="(420,660)" to="(420,670)"/>
     <wire from="(520,240)" to="(520,250)"/>
     <wire from="(570,760)" to="(630,760)"/>
     <wire from="(620,290)" to="(620,360)"/>
+    <wire from="(360,720)" to="(360,740)"/>
     <wire from="(420,340)" to="(420,360)"/>
     <wire from="(740,130)" to="(740,210)"/>
     <wire from="(640,580)" to="(810,580)"/>
@@ -1883,14 +1885,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(480,220)" to="(560,220)"/>
     <wire from="(440,300)" to="(440,490)"/>
     <wire from="(510,290)" to="(510,480)"/>
+    <wire from="(400,600)" to="(400,660)"/>
     <wire from="(490,530)" to="(490,590)"/>
-    <wire from="(280,680)" to="(480,680)"/>
     <wire from="(720,200)" to="(730,200)"/>
+    <wire from="(430,680)" to="(480,680)"/>
     <wire from="(340,240)" to="(520,240)"/>
     <wire from="(380,800)" to="(560,800)"/>
     <wire from="(420,390)" to="(420,400)"/>
     <wire from="(550,70)" to="(550,140)"/>
     <wire from="(600,160)" to="(600,230)"/>
+    <wire from="(380,650)" to="(380,800)"/>
     <wire from="(790,600)" to="(790,630)"/>
     <wire from="(570,590)" to="(800,590)"/>
     <wire from="(520,290)" to="(520,320)"/>
@@ -1900,8 +1904,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(660,330)" to="(660,480)"/>
     <wire from="(620,230)" to="(620,250)"/>
     <wire from="(590,240)" to="(590,260)"/>
+    <wire from="(320,740)" to="(360,740)"/>
     <wire from="(380,480)" to="(420,480)"/>
     <wire from="(90,640)" to="(120,640)"/>
+    <wire from="(280,680)" to="(300,680)"/>
     <wire from="(750,660)" to="(780,660)"/>
     <wire from="(490,260)" to="(500,260)"/>
     <wire from="(520,320)" to="(590,320)"/>
@@ -1917,17 +1923,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(410,430)" to="(410,440)"/>
     <wire from="(560,270)" to="(600,270)"/>
     <wire from="(550,620)" to="(780,620)"/>
+    <wire from="(380,600)" to="(380,620)"/>
     <wire from="(490,230)" to="(490,260)"/>
     <wire from="(490,230)" to="(590,230)"/>
-    <wire from="(380,480)" to="(380,510)"/>
     <wire from="(430,520)" to="(430,610)"/>
     <wire from="(510,610)" to="(510,630)"/>
     <wire from="(640,540)" to="(640,580)"/>
     <wire from="(720,210)" to="(740,210)"/>
     <wire from="(590,240)" to="(750,240)"/>
+    <wire from="(300,680)" to="(300,720)"/>
+    <wire from="(320,740)" to="(320,780)"/>
     <wire from="(240,650)" to="(260,650)"/>
     <wire from="(550,360)" to="(550,480)"/>
     <wire from="(550,360)" to="(620,360)"/>
+    <wire from="(300,720)" to="(310,720)"/>
+    <wire from="(320,780)" to="(330,780)"/>
     <wire from="(480,220)" to="(480,270)"/>
     <wire from="(650,70)" to="(650,130)"/>
     <wire from="(530,330)" to="(660,330)"/>
@@ -1943,6 +1953,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(420,340)" to="(600,340)"/>
     <wire from="(500,290)" to="(500,300)"/>
     <wire from="(510,630)" to="(550,630)"/>
+    <wire from="(300,680)" to="(410,680)"/>
     <wire from="(630,290)" to="(630,370)"/>
     <wire from="(240,640)" to="(280,640)"/>
     <wire from="(800,590)" to="(800,630)"/>
@@ -1952,13 +1963,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(680,220)" to="(700,220)"/>
     <wire from="(350,480)" to="(380,480)"/>
     <wire from="(590,320)" to="(590,480)"/>
+    <wire from="(340,720)" to="(360,720)"/>
     <wire from="(400,340)" to="(420,340)"/>
+    <wire from="(400,660)" to="(420,660)"/>
+    <wire from="(380,600)" to="(400,600)"/>
     <wire from="(260,650)" to="(260,690)"/>
     <wire from="(650,130)" to="(740,130)"/>
     <wire from="(750,240)" to="(750,660)"/>
     <wire from="(470,350)" to="(610,350)"/>
     <wire from="(380,410)" to="(390,410)"/>
     <wire from="(340,160)" to="(600,160)"/>
+    <wire from="(380,480)" to="(380,600)"/>
     <wire from="(590,260)" to="(600,260)"/>
     <wire from="(620,370)" to="(630,370)"/>
     <comp lib="0" loc="(460,70)" name="Pin">
@@ -1966,9 +1981,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="enable-bit"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="1" loc="(380,540)" name="NOT Gate">
-      <a name="facing" val="south"/>
     </comp>
     <comp lib="1" loc="(570,760)" name="Controlled Buffer">
       <a name="width" val="18"/>
@@ -1997,6 +2009,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
     <comp loc="(240,640)" name="isEqual"/>
+    <comp loc="(340,720)" name="getSignBit"/>
     <comp lib="1" loc="(490,530)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="width" val="18"/>
@@ -2035,6 +2048,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="select" val="2"/>
       <a name="width" val="18"/>
     </comp>
+    <comp lib="1" loc="(410,680)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
+      <a name="width" val="18"/>
+    </comp>
     <comp lib="6" loc="(350,453)" name="Text">
       <a name="text" val="input1-input2"/>
     </comp>
@@ -2059,6 +2076,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="isCMP"/>
     </comp>
     <comp lib="0" loc="(700,220)" name="Splitter"/>
+    <comp lib="1" loc="(380,650)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
     <comp lib="0" loc="(340,160)" name="Pin">
       <a name="width" val="18"/>
       <a name="tristate" val="false"/>
@@ -2068,6 +2088,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(120,640)" name="Constant">
       <a name="width" val="18"/>
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(330,780)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="CF"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="2" loc="(520,250)" name="Demultiplexer">
       <a name="facing" val="south"/>
@@ -2443,6 +2469,47 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="fanout" val="18"/>
       <a name="incoming" val="18"/>
+    </comp>
+  </circuit>
+  <circuit name="getSignBit">
+    <a name="circuit" val="getSignBit"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(190,180)" to="(220,180)"/>
+    <wire from="(220,180)" to="(220,190)"/>
+    <wire from="(290,170)" to="(340,170)"/>
+    <wire from="(220,190)" to="(270,190)"/>
+    <comp lib="0" loc="(190,180)" name="Pin">
+      <a name="width" val="18"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="input"/>
+    </comp>
+    <comp lib="0" loc="(340,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="signBit"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(270,190)" name="Splitter">
+      <a name="incoming" val="18"/>
+      <a name="bit0" val="1"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit16" val="1"/>
+      <a name="bit17" val="0"/>
     </comp>
   </circuit>
 </project>
