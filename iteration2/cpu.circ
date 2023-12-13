@@ -2512,4 +2512,80 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit17" val="0"/>
     </comp>
   </circuit>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(190,420)" to="(190,550)"/>
+    <wire from="(190,420)" to="(220,420)"/>
+    <wire from="(180,550)" to="(190,550)"/>
+    <wire from="(390,570)" to="(570,570)"/>
+    <comp lib="0" loc="(390,570)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(180,550)" name="Program Counter"/>
+    <comp lib="6" loc="(294,367)" name="Text">
+      <a name="text" val="InstructionMemory"/>
+    </comp>
+    <comp lib="6" loc="(962,284)" name="Text">
+      <a name="text" val="RAM"/>
+    </comp>
+    <comp lib="4" loc="(1040,330)" name="RAM"/>
+    <comp lib="4" loc="(360,420)" name="ROM">
+      <a name="addrWidth" val="18"/>
+      <a name="dataWidth" val="18"/>
+      <a name="contents">addr/data: 18 18
+0
+</a>
+    </comp>
+    <comp loc="(330,150)" name="registerList"/>
+    <comp loc="(600,560)" name="Jumps"/>
+  </circuit>
+  <circuit name="flagRegister">
+    <a name="circuit" val="flagRegister"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(410,270)" to="(580,270)"/>
+    <wire from="(600,270)" to="(640,270)"/>
+    <wire from="(320,280)" to="(380,280)"/>
+    <wire from="(290,270)" to="(380,270)"/>
+    <wire from="(590,200)" to="(590,260)"/>
+    <wire from="(160,410)" to="(230,410)"/>
+    <wire from="(160,370)" to="(230,370)"/>
+    <wire from="(560,200)" to="(590,200)"/>
+    <wire from="(320,280)" to="(320,390)"/>
+    <wire from="(280,390)" to="(320,390)"/>
+    <comp lib="1" loc="(600,270)" name="Controlled Buffer">
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(560,200)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="readEnable"/>
+    </comp>
+    <comp loc="(410,270)" name="d-flip-flop"/>
+    <comp lib="0" loc="(160,410)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="writeEnable"/>
+    </comp>
+    <comp lib="0" loc="(640,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="outputBit"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(160,370)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="1" loc="(280,390)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(290,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="inputData"/>
+    </comp>
+  </circuit>
 </project>
