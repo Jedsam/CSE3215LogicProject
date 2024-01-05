@@ -111,7 +111,7 @@ assign debug_branch = my_cu.branch;
     // Program counter update logic
 always @(posedge clk or posedge reset) begin
     if (reset) begin
-        program_counter <= 0;
+        program_counter <= 1023;
         $display("Reset activated: PC set to 0");
     end else begin
         program_counter <= program_counter + 1;
