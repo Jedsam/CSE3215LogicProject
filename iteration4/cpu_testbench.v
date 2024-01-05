@@ -45,7 +45,6 @@ module cpu_testbench;
 	myCpu.my_data_memory.memory[2] = 0;
 	myCpu.my_data_memory.memory[3] = 0;
 	myCpu.my_data_memory.memory[4] = 0;
-	myCpu.my_data_memory.memory[5] = 0;
 
 
         // Load a test program into instruction memory

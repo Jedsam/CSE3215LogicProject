@@ -77,8 +77,9 @@ module cpu(
         .clk(clk),
         .mem_write_en(mem_write),
         .mem_read_en(mem_read),
-        .address(alu_result[9:0]),
-        .data(data_mem_out)
+        .address(addr),
+	.in_data(),
+        .out_data(data_mem_out)
     );
 
     // Instantiate instruction memory
@@ -107,6 +108,7 @@ assign debug_branch = my_cu.branch;
     // ALU operand selection and write data path logic
     assign alu_operand2 = alu_src ? {12'b0, imm} : read_data2; // Extend immediate value
     assign write_data = mem_to_reg ? data_mem_out : alu_result;
+    assign data_mem_in = my_reg_file.registers[reg_dst];
     //assign reg_dst = (opcode == 4'b0010) ? reg_src1 : reg_src2; // Example for ADDI instruction
 
     // Program counter update logic

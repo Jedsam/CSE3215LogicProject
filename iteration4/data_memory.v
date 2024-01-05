@@ -3,7 +3,8 @@ module data_memory(
     input mem_write_en,
     input mem_read_en,
     input [9:0] address,
-    inout [17:0] data
+    input [17:0] in_data,
+    output [17:0] out_data
 );
 
 
@@ -12,9 +13,9 @@ module data_memory(
 
     always @(posedge clk) begin
         if (mem_write_en) begin
-            memory[address] <= data;
+            memory[address] <= in_data;
         end
     end
 
-    assign data = (mem_read_en) ? memory[address] : 18'bz;
+    assign out_data = (mem_read_en) ? memory[address] : 18'bz;
 endmodule
