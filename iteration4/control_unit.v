@@ -38,6 +38,8 @@ module control_unit(
     parameter ALU_NAND = 3'b010;
     parameter ALU_NOR  = 3'b011;
     parameter ALU_SUB  = 3'b100; // For CMP
+    parameter ALU_ADDI = 3'b101;
+    parameter ALU_ANDI = 3'b110;
 
     always @(*) begin
         // Default control signal values
@@ -68,12 +70,12 @@ module control_unit(
                 reg_write = 1;
             end
             ADDI: begin
-                alu_op = ALU_ADD;
+                alu_op = ALU_ADDI;
                 alu_src = 1;
                 reg_write = 1;
             end
             ANDI: begin
-                alu_op = ALU_AND;
+                alu_op = ALU_ANDI;
                 alu_src = 1;
                 reg_write = 1;
             end

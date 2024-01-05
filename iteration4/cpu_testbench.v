@@ -33,14 +33,21 @@ module cpu_testbench;
         #20 reset = 0;
 
         // Initialize registers
+	myCpu.my_reg_file.registers[0] = 0;
 	myCpu.my_reg_file.registers[1] = 0;
 	myCpu.my_reg_file.registers[2] = 0;
 	myCpu.my_reg_file.registers[3] = 0;
+	myCpu.my_reg_file.registers[4] = 0;
 
 
         // Load a test program into instruction memory
 	myCpu.my_instr_memory.instr_mem[0] = 18'h08004; // ADDI 0 #4
- 	myCpu.my_instr_memory.instr_mem[1] = 18'h24000; // ST 0 0        
+ 	myCpu.my_instr_memory.instr_mem[1] = 18'h24000; // ST 0 0  
+	myCpu.my_instr_memory.instr_mem[2] = 18'h20400; // LD 1 0
+	myCpu.my_instr_memory.instr_mem[3] = 18'h04840; // ADD 2 1 0
+	myCpu.my_instr_memory.instr_mem[4] = 18'h24801; // ST 2 1
+	myCpu.my_instr_memory.instr_mem[5] = 18'h0cc81; // AND 3 2 1
+	myCpu.my_instr_memory.instr_mem[6] = 18'h24c00; // ST 3 0
 
 
 	// Wait for a few clock cycles after reset
@@ -57,8 +64,23 @@ module cpu_testbench;
 
   	        // Check outputs and internal states
            	// we can adjust the timing (#50, #100, etc.) according to WHATEVER clock period and or instruction execution time. cheers.
-   	#20 $display("After first instruction: PC = %d, R1 = %d, R2 = %d, R3 = %d", myCpu.program_counter, myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
-    	#20 $display("After second instruction: PC = %d, R1 = %d, R2 = %d, R3 = %d", myCpu.program_counter, myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
+   	#10 $display("After first instruction: PC = %d,R0 =%d R1 =%d, R2 =%d, R3 =%d", myCpu.program_counter, myCpu.my_reg_file.registers[0], myCpu.my_reg_file.registers[1], myCpu.my_reg_file.registers[2], myCpu.my_reg_file.registers[3]);
 	
 	// Wait for a few clock cycles after loading instructions
     	#10;
@@ -68,9 +90,10 @@ module cpu_testbench;
 	
 
 
-
+	#10000;
         // End the simulation
         $finish;
     end
 endmodule
+
 

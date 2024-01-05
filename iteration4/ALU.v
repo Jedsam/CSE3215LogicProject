@@ -9,15 +9,23 @@ module alu(
 );
 
     // Define operations
-    localparam ALU_ADD  = 4'b0001;
-    localparam ALU_AND  = 4'b0011;
-    localparam ALU_NAND = 4'b0101;
-    localparam ALU_NOR  = 4'b0110;
+    localparam ALU_ADD  = 3'b000;
+    localparam ALU_AND  = 3'b001;
+    localparam ALU_NAND = 3'b010;
+    localparam ALU_NOR  = 3'b011;
+    localparam ALU_SUB  = 3'b100; // For CMP
+    localparam ALU_ADDI = 3'b101;
+    localparam ALU_ANDI = 3'b110;
 
     always @(*) begin
         case (aluControl)
             ALU_ADD: {carry_out, result} = a + b; // ADD with carry out
+	    ALU_ADDI: {carry_out, result} = a + b; // ADD with carry out
             ALU_AND: begin
+                result = a & b; // AND
+                carry_out = 0;
+            end
+	    ALU_ANDI: begin
                 result = a & b; // AND
                 carry_out = 0;
             end
@@ -27,6 +35,10 @@ module alu(
             end
             ALU_NOR: begin
                 result = ~(a | b); // NOR
+                carry_out = 0;
+            end
+	    ALU_SUB: begin
+                result = a - b; // AND
                 carry_out = 0;
             end
             default: begin
