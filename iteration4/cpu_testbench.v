@@ -39,9 +39,17 @@ module cpu_testbench;
 	myCpu.my_reg_file.registers[3] = 0;
 	myCpu.my_reg_file.registers[4] = 0;
 
+	// data memoryi s?f?rlamaya çal??t?m ama bilmiyorum oldu mu
+	myCpu.my_data_memory.memory[0] = 0;
+	myCpu.my_data_memory.memory[1] = 0;
+	myCpu.my_data_memory.memory[2] = 0;
+	myCpu.my_data_memory.memory[3] = 0;
+	myCpu.my_data_memory.memory[4] = 0;
+	myCpu.my_data_memory.memory[5] = 0;
+
 
         // Load a test program into instruction memory
-	myCpu.my_instr_memory.instr_mem[0] = 18'h08004; // ADDI 0 #4
+	myCpu.my_instr_memory.instr_mem[0] = 18'h08004; // ADDI 0 0 #4
  	myCpu.my_instr_memory.instr_mem[1] = 18'h24000; // ST 0 0  
 	myCpu.my_instr_memory.instr_mem[2] = 18'h20400; // LD 1 0
 	myCpu.my_instr_memory.instr_mem[3] = 18'h04840; // ADD 2 1 0
@@ -90,7 +98,7 @@ module cpu_testbench;
 	
 
 
-	#10000;
+	#100;
         // End the simulation
         $finish;
     end

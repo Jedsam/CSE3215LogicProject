@@ -91,8 +91,9 @@ module cpu(
 
     // Assignments
     assign opcode = current_instr[17:14]; 
-    assign reg_src1 = current_instr[13:10];
-    assign reg_src2 = current_instr[9:6];
+    assign reg_dst = current_instr[13:10];
+    assign reg_src1 = current_instr[9:6];
+    assign reg_src2 = current_instr[3:0];
     assign addr = current_instr[9:0];
     assign imm = current_instr[5:0]; // Assign immediate value
 
@@ -106,7 +107,7 @@ assign debug_branch = my_cu.branch;
     // ALU operand selection and write data path logic
     assign alu_operand2 = alu_src ? {12'b0, imm} : read_data2; // Extend immediate value
     assign write_data = mem_to_reg ? data_mem_out : alu_result;
-    assign reg_dst = (opcode == 4'b0010) ? reg_src1 : reg_src2; // Example for ADDI instruction
+    //assign reg_dst = (opcode == 4'b0010) ? reg_src1 : reg_src2; // Example for ADDI instruction
 
     // Program counter update logic
 always @(posedge clk or posedge reset) begin
