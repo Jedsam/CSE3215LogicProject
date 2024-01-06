@@ -1,0 +1,15 @@
+// memory data file (do not edit the following line - required for mem load use)
+// instance=/cpu_testbench/myCpu/my_instr_memory/instr_mem
+// format=mti addressradi=h dataradi=h version=1.0 wordsperline=1 noaddres
+08001
+24000
+08444
+24401
+28001
+2C002
+24402
+08803
+28402
+2C002
+24803
+24804

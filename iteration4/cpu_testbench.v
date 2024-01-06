@@ -48,13 +48,14 @@ module cpu_testbench;
 
 
         // Load a test program into instruction memory
-	myCpu.my_instr_memory.instr_mem[0] = 18'h08004; // ADDI 0 0 #4
+	/*myCpu.my_instr_memory.instr_mem[0] = 18'h08004; // ADDI 0 0 #4
  	myCpu.my_instr_memory.instr_mem[1] = 18'h24000; // ST 0 0  
 	myCpu.my_instr_memory.instr_mem[2] = 18'h20400; // LD 1 0
 	myCpu.my_instr_memory.instr_mem[3] = 18'h04840; // ADD 2 1 0
 	myCpu.my_instr_memory.instr_mem[4] = 18'h24801; // ST 2 1
 	myCpu.my_instr_memory.instr_mem[5] = 18'h0c081; // AND 1 2 1
 	myCpu.my_instr_memory.instr_mem[6] = 18'h24c00; // ST 3 0
+	*/
 
 
 	// Wait for a few clock cycles after reset
