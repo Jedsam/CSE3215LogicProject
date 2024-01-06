@@ -78,7 +78,7 @@ module cpu(
         .mem_write_en(mem_write),
         .mem_read_en(mem_read),
         .address(addr),
-	.in_data(),
+	.in_data(myCpu.my_reg_file.registers[reg_dst]),
         .out_data(data_mem_out)
     );
 
