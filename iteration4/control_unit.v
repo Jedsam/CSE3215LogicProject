@@ -12,7 +12,8 @@ module control_unit(
     output reg mem_write, // Signal to write to memory
     output reg alu_src, // Signal to select second ALU operand (register/immediate)
     output reg reg_write, // Signal to write to the register file
-    output reg [2:0] alu_op // Control bits for ALU operation
+    output reg [2:0] alu_op, // Control bits for ALU operation
+    output reg is_cmp_op // Signal to write to CF and ZF
 );
 
     // Define opcodes as parameters for readability
@@ -51,7 +52,7 @@ module control_unit(
         reg_write = 0;
         alu_op = ALU_ADD;
         branch = 0; // No branch by default
-
+	
         case (opcode)
             ADD: begin
                 alu_op = ALU_ADD;
@@ -107,7 +108,27 @@ module control_unit(
                     branch = 1;
                 end
             end
-
+	    JB: begin
+                // For JA, check if the zero flag is clear and carry flag is clear
+                if (!ZF && CF) begin
+                    pc_write = 1;
+                    branch = 1;
+                end
+            end
+	    JAE: begin
+                // For JA, check if the zero flag is clear and carry flag is clear
+                if (!CF) begin
+                    pc_write = 1;
+                    branch = 1;
+                end
+            end
+	    JBE: begin
+                // For JA, check if the zero flag is clear and carry flag is clear
+                if (ZF || CF) begin
+                    pc_write = 1;
+                    branch = 1;
+                end
+            end
             // other things to b added.. perhaps..
             // perhaps...
 

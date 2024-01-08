@@ -1,11 +1,14 @@
 module alu(
+    input clk,
     input [2:0] aluControl,
     input [17:0] a,
     input [17:0] b,
     output reg [17:0] result,
     output zero,
     output negative,
-    output reg carry_out
+    output reg carry_out,
+    output reg cf_out,
+    output reg zf_out
 );
 
     // Define operations
@@ -38,8 +41,8 @@ module alu(
                 carry_out = 0;
             end
 	    ALU_SUB: begin
-                result = a - b; // AND
-                carry_out = 0;
+                zf_out = a == b ? 1'b1 : 1'b0;
+                cf_out = b > a ? 1'b1 : 1'b0;
             end
             default: begin
                 result = 0;
